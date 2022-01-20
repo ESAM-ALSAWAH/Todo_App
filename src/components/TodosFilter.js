@@ -48,6 +48,7 @@ export const TodosFilter = (props) => {
     e.target.classList.add('active')
   }
 
+  console.log('re-render')
   return (
     <Box
       my="10"
