@@ -24,12 +24,12 @@ const App = () => {
           EditTodo={EditTodo}
           deleteTodo={DeleteTodo}
         />
-        <TodosFilter
+        {/*        <TodosFilter
           setTodosFilter={setTodosFilter}
           DeleteCompletedTodo={DeleteCompletedTodo}
           todos={todos}
           length={todosFilter.length}
-        />
+        /> */}
       </VStack>
     </VStack>
   )
