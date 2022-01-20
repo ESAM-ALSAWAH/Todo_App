@@ -19,7 +19,7 @@ export const AddTodo = (props) => {
     <FormControl
       bgColor={bg}
       onKeyUp={(e) => {
-        if (e.keyCode === 13) {
+        if (e.keyCode === 13 && inputValue.trim(' ')) {
           handlSubmit()
           setInputValue('')
           setCompleted(false)

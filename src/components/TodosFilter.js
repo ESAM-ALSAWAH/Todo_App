@@ -10,10 +10,11 @@ import React from 'react'
 
 export const TodosFilter = (props) => {
   const { setTodosFilter, todos, DeleteCompletedTodo, length } = props
-
+  const funColorMode = useColorModeValue
   const [isSmallThan450] = useMediaQuery('(max-width: 450px)')
-  const bg = useColorModeValue('#fff', '#25273c')
-  const color = useColorModeValue('#333', '#ddd')
+  const bg = funColorMode('#fff', '#25273c')
+  const color = funColorMode('#333', '#ddd')
+
   const TextStyle = {
     cursor: 'pointer',
     fontSize: '13px',
@@ -48,7 +49,6 @@ export const TodosFilter = (props) => {
     e.target.classList.add('active')
   }
 
-  console.log('re-render')
   return (
     <Box
       my="10"
