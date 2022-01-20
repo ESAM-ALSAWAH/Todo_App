@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, memo } from 'react'
 import { HStack, Heading, VStack } from '@chakra-ui/react'
 import { ToggleTheme, AddTodo, Todos, TodosFilter } from './components'
 import { useTodos } from './hooks/useTodos'
 
-const App = () => {
+const App = memo(() => {
   const [todos, addtodo, deleteTodo, EditTodo, DeleteCompletedTodo] = useTodos()
   const [todosFilter, setTodosFilter] = useState(todos)
   useEffect(() => {
@@ -33,6 +33,6 @@ const App = () => {
       </VStack>
     </VStack>
   )
-}
+})
 
 export default App
